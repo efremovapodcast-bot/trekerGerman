@@ -1,0 +1,105 @@
+{
+  "quotes": [
+    "Порядок — это не про идеальность, это про то, чтобы найти нужное, когда нужно.",
+    "Маленький шаг сегодня стоит больше, чем идеальный план на завтра.",
+    "Ты не обязана успеть всё. Ты обязана начать с главного.",
+    "Хаос уменьшается не усилием воли, а системой, к которой можно вернуться.",
+    "День становится лучше не от количества дел, а от внимания, с которым ты их делаешь.",
+    "Забота о себе — это тоже пункт плана, а не награда за выполнение остальных.",
+    "Ты строишь не идеальный день, а день, из которого не стыдно вырасти завтра."
+  ],
+  "dayQuestions": [
+    "Интересно, а каково это — зарабатывать миллион рублей в месяц?",
+    "Интересно, а каково это — жить полгода в другой стране просто ради любопытства?",
+    "Интересно, а каково это — иметь команду, которая делает половину твоей работы?",
+    "Интересно, а каково это — проснуться и точно знать, что сегодняшний день пройдёт легко?",
+    "Интересно, а каково это — быть человеком, к которому клиенты приходят сами, без поиска?",
+    "Интересно, а каково это — сказать «нет» и не чувствовать вину?",
+    "Интересно, а каково это — жить без единого фонового беспокойства о деньгах?"
+  ],
+  "nightQuestions": [
+    "Что бы сегодняшний день сказал обо мне, если бы у него был голос?",
+    "Какое одно решение сегодня было маленьким, но правильным?",
+    "От чего я сегодня отказалась не жалея?",
+    "Что я узнала о себе за этот день?",
+    "Какой момент дня я хотела бы прожить ещё раз?",
+    "Что я сделала сегодня в первый раз?",
+    "За что моё будущее «я» скажет спасибо сегодняшней мне?"
+  ],
+  "morning": {
+    "rituals": [
+      { "id": "r1", "title": "Стакан воды натощак", "done": false },
+      { "id": "r2", "title": "Движение / спорт", "done": false, "isSport": true },
+      { "id": "r3", "title": "Медитация", "done": false },
+      { "id": "r4", "title": "Записать 3 приоритета дня", "done": true }
+    ],
+    "medications": [
+      { "id": "m1", "name": "Витамин D", "dose": "1 капсула", "taken": true },
+      { "id": "m2", "name": "Магний", "dose": "2 таблетки", "taken": false }
+    ]
+  },
+  "sportTypes": [
+    { "id": "sport_stretch", "label": "Растяжка" },
+    { "id": "sport_cardio", "label": "Зарядка" },
+    { "id": "sport_pool", "label": "Бассейн" },
+    { "id": "sport_other", "label": "Другое" }
+  ],
+  "water": {
+    "current": 500,
+    "goal": 2000,
+    "step": 250
+  },
+  "dayPlan": [
+    { "id": "p1", "text": "Созвон с партнёром по проекту клиента", "done": true },
+    { "id": "p2", "text": "Сделать 3 макета для гайда", "done": false },
+    { "id": "p3", "text": "Записать сценарий рилса", "done": false },
+    { "id": "p4", "text": "20 минут — разбор почты", "done": false }
+  ],
+  "habits": [
+    { "id": "h1", "title": "Почитать книгу 20 минут", "done": false },
+    { "id": "h2", "title": "Позаниматься английским", "done": true },
+    { "id": "h3", "title": "Без соцсетей после 22:00", "done": false }
+  ],
+  "historySeed": [
+    { "offset": -6, "items": {
+      "r1":true,"r2":true,"r3":false,"r4":true,
+      "m1":true,"m2":true,
+      "h1":true,"h2":false,"h3":true,
+      "sport_stretch":true,"sport_cardio":false,"sport_pool":false,"sport_other":false } },
+    { "offset": -5, "items": {
+      "r1":true,"r2":true,"r3":true,"r4":true,
+      "m1":true,"m2":false,
+      "h1":false,"h2":true,"h3":false,
+      "sport_stretch":false,"sport_cardio":true,"sport_pool":false,"sport_other":false } },
+    { "offset": -4, "items": {
+      "r1":true,"r2":false,"r3":false,"r4":true,
+      "m1":true,"m2":true,
+      "h1":true,"h2":false,"h3":true,
+      "sport_stretch":false,"sport_cardio":false,"sport_pool":false,"sport_other":false } },
+    { "offset": -3, "items": {
+      "r1":true,"r2":true,"r3":true,"r4":true,
+      "m1":true,"m2":true,
+      "h1":false,"h2":true,"h3":true,
+      "sport_stretch":true,"sport_cardio":true,"sport_pool":false,"sport_other":false } },
+    { "offset": -2, "items": {
+      "r1":true,"r2":true,"r3":false,"r4":true,
+      "m1":true,"m2":false,
+      "h1":true,"h2":false,"h3":false,
+      "sport_stretch":false,"sport_cardio":false,"sport_pool":true,"sport_other":false } },
+    { "offset": -1, "items": {
+      "r1":true,"r2":false,"r3":true,"r4":true,
+      "m1":true,"m2":true,
+      "h1":false,"h2":true,"h3":true,
+      "sport_stretch":false,"sport_cardio":false,"sport_pool":false,"sport_other":false } }
+  ],
+  "evening": {
+    "goodThings": [
+      "Успела созвониться с партнёром без спешки",
+      "Нашла классную референс-палитру для нового гайда"
+    ],
+    "gratitude": [
+      "За утренний кофе в тишине",
+      "За то, что партнёр взял на себя вёрстку"
+    ]
+  }
+}
