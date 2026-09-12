@@ -334,6 +334,26 @@
       localStorage.setItem(key, JSON.stringify({date: todayKey(), value: value}));
     }catch(e){}
   }
+  /* Списки, которые должны жить дольше одного дня: сами пункты сохраняются
+     навсегда, а отметки выполнения сбрасываются при смене даты. */
+  function loadPersistentList(key, fallback, doneField){
+    try{
+      var raw = localStorage.getItem(key);
+      if(!raw) return fallback;
+      var parsed = JSON.parse(raw);
+      var list = parsed.value;
+      if(!Array.isArray(list)) return fallback;
+      if(parsed.date !== todayKey()){
+        list = list.map(function(item){
+          var copy = {};
+          for(var k in item){ if(Object.prototype.hasOwnProperty.call(item,k)) copy[k]=item[k]; }
+          copy[doneField] = false;
+          return copy;
+        });
+      }
+      return list;
+    }catch(e){ return fallback; }
+  }
   function todayKey(){
     return now.getFullYear()+'-'+now.getMonth()+'-'+now.getDate();
   }
@@ -345,10 +365,10 @@
     var dayQ = data.dayQuestions[dayIndex(data.dayQuestions.length)];
     var nightQ = data.nightQuestions[dayIndex(data.nightQuestions.length)];
 
-    var rituals = loadState('rituals', data.morning.rituals);
-    var meds = loadState('meds', data.morning.medications);
+    var rituals = loadPersistentList('rituals', data.morning.rituals, 'done');
+    var meds = loadPersistentList('meds', data.morning.medications, 'taken');
     var plan = loadState('plan', data.dayPlan);
-    var habits = loadState('habits', data.habits || []);
+    var habits = loadPersistentList('habits', data.habits || [], 'done');
     var water = loadState('water', data.water);
     var goodThings = loadState('goodThings', data.evening.goodThings);
     var gratitude = loadState('gratitude', data.evening.gratitude);
